@@ -23,7 +23,7 @@ export const projectsData = [
     category: 'Python-Django',
     description:'Python,Javascript,Django,Bootstrap',
     code: 'https://github.com/Maneshnarayanan/ONLINE-CV-BUILDER',
-    demo: 'https://cvbuilder1.pythonanywhere.com/home/'
+    demo: 'https://cvbuilder1.pythonanywhere.com'
   },
   {
     id: 3,
