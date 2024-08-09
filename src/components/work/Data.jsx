@@ -57,7 +57,7 @@ export const projectsData = [
   {
     id: 6,
     image: Gps,
-    title: 'Officail website Launch',
+    title: 'Official website Launch',
     category: 'Other',
     description:'html,CSS,Javascript',
     code: 'https://www.greenwoodspublicschool.org/',
