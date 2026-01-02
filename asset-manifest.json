@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/My_Portfolio/static/css/main.66d218f7.css",
-    "main.js": "/My_Portfolio/static/js/main.ed9a6e35.js",
+    "main.css": "/My_Portfolio/static/css/main.2e359aa2.css",
+    "main.js": "/My_Portfolio/static/js/main.a79f9f7b.js",
     "static/media/Gps.png": "/My_Portfolio/static/media/Gps.c29d2e17c633a0eac569.png",
     "static/media/Olx.png": "/My_Portfolio/static/media/Olx.6f96b7308200f769a63e.png",
     "static/media/2.jpg": "/My_Portfolio/static/media/2.3aa60b15f819f5356005.jpg",
@@ -11,14 +11,14 @@
     "static/media/Manesh_K_FUll_Stack_Developer.pdf": "/My_Portfolio/static/media/Manesh_K_FUll_Stack_Developer.21c40ccf3fc72b2ac5eb.pdf",
     "static/media/Onlineexam.png": "/My_Portfolio/static/media/Onlineexam.e7415b35713390b94408.png",
     "static/media/cvbuilder.JPG": "/My_Portfolio/static/media/cvbuilder.0e607af0b67c3ff158c2.JPG",
-    "static/media/logo.svg": "/My_Portfolio/static/media/logo.7558777d033c30ecdc731f6abdb45949.svg",
+    "static/media/logo.svg": "/My_Portfolio/static/media/logo.1947f8c64f0cfe22763f264af9ce7de6.svg",
     "static/media/uc.avif": "/My_Portfolio/static/media/uc.095123402ebd2bc20519.avif",
     "index.html": "/My_Portfolio/index.html",
-    "main.66d218f7.css.map": "/My_Portfolio/static/css/main.66d218f7.css.map",
-    "main.ed9a6e35.js.map": "/My_Portfolio/static/js/main.ed9a6e35.js.map"
+    "main.2e359aa2.css.map": "/My_Portfolio/static/css/main.2e359aa2.css.map",
+    "main.a79f9f7b.js.map": "/My_Portfolio/static/js/main.a79f9f7b.js.map"
   },
   "entrypoints": [
-    "static/css/main.66d218f7.css",
-    "static/js/main.ed9a6e35.js"
+    "static/css/main.2e359aa2.css",
+    "static/js/main.a79f9f7b.js"
   ]
 }
