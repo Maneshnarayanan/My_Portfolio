@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './header.css';
 import classnames from 'classnames';
-
+import Logo from '../../assets/logo.svg';
 export const Header = () => {
   // ---- Toggle Menu
   const [showMenu, setShowMenu] = useState(false);
@@ -24,7 +24,9 @@ export const Header = () => {
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="#home" className="nav__logo">LOGO</a>
+        <a href="#home" className="nav__logo">
+          <img src={Logo} alt="manesh" />
+        </a>
 
         <div
           className={classnames('nav__menu', {

@@ -13,11 +13,12 @@
   font-weight: var(--font-medium);
   border-radius: 0.5rem;
   text-transform: capitalize;
+  transition: .3s;
 }
 
 .work__item:hover {
-  background-color: var(--title-color);
-  color: var(--container-color);
+  background-color: var(--first-color);
+  color: var(--body-color);
 }
 
 .work__container {
@@ -28,9 +29,16 @@
 
 .work__card {
   background-color: var(--container-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--white-alpha);
   padding: 1.25rem;
   border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: .3s;
+}
+
+.work__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .work__img {
@@ -44,6 +52,7 @@
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   margin-bottom: var(--m-0-5);
+  color: var(--title-color);
 }
 
 .work__button {
@@ -52,6 +61,10 @@
   display: flex;
   align-items: center;
   column-gap: 0.25rem;
+}
+
+.work__button:hover {
+  color: var(--first-color);
 }
 
 .work__button-icon {
@@ -63,13 +76,13 @@
   transform: translateX(0.25rem);
 }
 
-/* active tab */
+/* Active tab */
 .active-tab {
-  background-color: var(--title-color);
-  color: var(--container-color);
+  background-color: var(--first-color);
+  color: var(--body-color);
 }
 
-/* breakpoints */
+/* Breakpoints */
 @media screen and (max-width: 992px) {
   .work__container {
     gap: 1.25rem;

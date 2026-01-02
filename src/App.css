@@ -4,17 +4,24 @@
 /* Variables */
 :root {
   --header-height: 3rem;
-  
-  /* colors */
-  --hue: 0;
-  --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 20%);
-  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
-  --text-color: hsl(var(--hue), var(--sat), 46%);
-  --body-color: hsl(var(--hue), var(--sat), 98%);
-  --container-color: #fff;
 
-  /* font and typography */
+  /* Colors - Modern Dark Theme */
+  --hue: 250;
+  --sat: 66%;
+  --first-color: hsl(var(--hue), var(--sat), 75%);
+  --first-color-alt: hsl(var(--hue), var(--sat), 71%);
+  /* Slightly darker for hover */
+  --title-color: hsl(var(--hue), 15%, 95%);
+  --title-color-dark: hsl(var(--hue), 10%, 100%);
+  --text-color: hsl(var(--hue), 15%, 75%);
+  --body-color: hsl(var(--hue), 28%, 12%);
+  --container-color: hsl(var(--hue), 29%, 16%);
+  /* New Variables for Glass/Glow */
+  --container-color-light: hsl(var(--hue), 29%, 20%);
+  --white-alpha: rgba(255, 255, 255, 0.1);
+  --black-alpha: rgba(0, 0, 0, 0.3);
+
+  /* Font and Typography */
   --body-font: 'Poppins', sans-serif;
 
   /* 0.5rem = 8px | 1rem = 16px ... */
@@ -27,27 +34,28 @@
   --smaller-font-size: 0.813rem;
   --tiny-font-size: 0.625rem;
 
-  /* font weight */
+  /* Font Weight */
   --font-normal: 400;
   --font-medium: 500;
   --font-semi-bold: 600;
 
-  /* margins bottom */
+  /* Margins Bottom */
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
   --mb-1: 1rem;
   --mb-1-5: 1.5rem;
   --mb-2: 2rem;
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
 
-  /* z-index */
+  /* Z-index */
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
 }
 
-/* responsive typography */
+/* Responsive Typography */
 @media screen and (max-width: 992px) {
   :root {
     --big-font-size: 2.75rem;
@@ -60,7 +68,7 @@
   }
 }
 
-/* base */
+/* Base */
 * {
   margin: 0;
   padding: 0;
@@ -71,7 +79,10 @@ html {
   scroll-behavior: smooth;
 }
 
-body, button, input, textarea {
+body,
+button,
+input,
+textarea {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
 }
@@ -79,9 +90,13 @@ body, button, input, textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  transition: .4s;
+  /* Smooth transition for theme changes */
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
 }
@@ -92,6 +107,12 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--text-color);
+  transition: .3s;
+}
+
+a:hover {
+  color: var(--first-color);
 }
 
 button {
@@ -105,7 +126,7 @@ img {
   height: auto;
 }
 
-/* reusable css classes */
+/* Reusable CSS Classes */
 .section {
   padding: 6rem 0 2rem;
 }
@@ -121,11 +142,12 @@ img {
   margin-bottom: 4rem;
 }
 
-.section__title, .section__subtitle {
+.section__title,
+.section__subtitle {
   text-align: center;
 }
 
-/* layout */
+/* Layout */
 .container {
   max-width: 968px;
   margin-left: auto;
@@ -137,22 +159,30 @@ img {
   gap: 1.5rem;
 }
 
-/* buttons */
+/* Buttons */
 .button {
-  display: inline-block;
-  background-color: var(--title-color);
-  color: var(--container-color);
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  /* Dark text on bright button */
   padding: 1.25rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
+  transition: .3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .button:hover {
-  background-color: var(--title-color-dark);
+  background-color: var(--first-color-alt);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .button__icon {
   margin-left: var(--mb-0-5);
+  font-size: 1.2rem;
+  transition: .3s;
 }
 
 .button--flex {
@@ -160,7 +190,15 @@ img {
   align-items: center;
 }
 
-/* breakpoints */
+/* New Utilities for Redesign */
+.glass {
+  background: var(--container-color);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--white-alpha);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Breakpoints */
 @media screen and (max-width: 992px) {
   .container {
     margin-left: var(--mb-1-5);
@@ -181,6 +219,7 @@ img {
   body {
     margin: 0 0 var(--header-height) 0;
   }
+
   .section {
     padding: 2rem 0 4rem;
   }
@@ -188,18 +227,15 @@ img {
   .section__subtitle {
     margin-bottom: var(--mb-3);
   }
-  
 }
 
-@media screen and (max-width: 576px) {
-  
-}
+@media screen and (max-width: 576px) {}
 
 @media screen and (max-width: 350px) {
   :root {
     --big-font-size: 2.25rem;
   }
-  
+
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
